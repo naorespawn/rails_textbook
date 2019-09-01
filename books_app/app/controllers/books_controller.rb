@@ -71,6 +71,6 @@ class BooksController < ApplicationController
     def book_params
       p "**********" # 見つけ易くするための目印。何でも良い。
       p params # paramsの中身を表示
-      params.require(:book).permit(:title, :memo)
+      params.require(:book).permit(:title, :memo, :author)
     end
 end
