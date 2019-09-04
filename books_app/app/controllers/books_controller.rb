@@ -69,8 +69,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      p "**********" # 見つけ易くするための目印。何でも良い。
-      p params # paramsの中身を表示
-      params.require(:book).permit(:title, :memo, :author)
+      params.require(:book).permit(:title, :memo, :author, :picture)
     end
 end
